@@ -1,0 +1,173 @@
+/* richardkemp.uk — personal site
+   Aesthetic: classical, minimal, gwern-inspired.
+   Serif body, off-white ground, generous whitespace. */
+
+:root {
+  --bg: #f9f7f3;
+  --fg: #2d2d2d;
+  --fg-muted: #6b6b6b;
+  --accent: #8b4513;
+  --rule: #d4cfc7;
+  --max-width: 640px;
+  --font-body: 'Source Serif 4', 'Georgia', 'Times New Roman', serif;
+  --font-mono: 'Source Code Pro', 'Menlo', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  padding: 3rem 1.5rem 4rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* --- Header --- */
+
+header {
+  margin-bottom: 3rem;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.3rem;
+}
+
+header .tagline {
+  color: var(--fg-muted);
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* --- Sections --- */
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--fg-muted);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* --- Project entries --- */
+
+.project {
+  margin-bottom: 1.8rem;
+}
+
+.project:last-child {
+  margin-bottom: 0;
+}
+
+.project h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.project .meta {
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+  margin-bottom: 0.4rem;
+}
+
+.project p {
+  font-size: 0.95rem;
+}
+
+/* --- Services list --- */
+
+.services {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  padding: 0.4rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  font-size: 0.95rem;
+}
+
+.services li::before {
+  content: "\2014";
+  position: absolute;
+  left: 0;
+  color: var(--fg-muted);
+}
+
+/* --- Links --- */
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+a:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* --- Footer --- */
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--fg-muted);
+}
+
+footer a {
+  color: var(--fg-muted);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
+/* --- Responsive --- */
+
+@media (max-width: 600px) {
+  html {
+    font-size: 16px;
+  }
+
+  body {
+    padding: 2rem 1.2rem 3rem;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
